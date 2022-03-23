@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <app-navbar></app-navbar>
+</div>
+<div class="container-fluid">
+  <div class="col-sm-9 justify-content-md-center">
+    <table class="table-responsive-sm ">
+      <tr *ngFor="let art of articles">
+        <th><a href="{{art.url}}" target="_blank"  style="text-decoration: none">{{art.title}}</a></th>
+        <th>: <app-like></app-like></th>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<hr>
+<div class="container-fluid">
+  <h2>Article Information</h2>
+  <table class="table-responsive-sm">
+    <tr>
+      <td>Title:</td>
+      <td><textarea [(ngModel)]="article.title" cols="70"></textarea></td>
+    </tr>
+    <tr>
+      <td>Url:</td>
+      <td>
+        <textarea [(ngModel)]="article.url" cols="70"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button style="float: right" (click)="addNewArticle()">Add</button></td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div>
+  <app-footer></app-footer>
+</div>
