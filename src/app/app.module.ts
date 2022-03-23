@@ -3,14 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FontSizeEditorComponent } from './font-size-editor/font-size-editor.component';
+import { PetComponent } from './pet/pet.component';
+import {FormsModule} from "@angular/forms";
+import { ProductComponent } from './product/product.component';
+import { SimpleCaculatorComponent } from './simple-caculator/simple-caculator.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FontSizeEditorComponent,
+    PetComponent,
+    ProductComponent,
+    SimpleCaculatorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
