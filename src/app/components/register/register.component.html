@@ -1,0 +1,95 @@
+<div class="container-fluid" xmlns="http://www.w3.org/1999/html">
+  <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+    <h3><b><u><i>Register</i></u></b></h3>
+    <table>
+      <tr>
+        <th>Email</th>
+        <td>
+          <label><input type="text" formControlName="email"></label>
+        </td>
+        <td>
+          <div *ngIf="!formData.get('email')?.valid && formData.get('email')?.touched " style="color: red">
+            Email is required
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>Password</th>
+        <td>
+          <label><input type="password" formControlName="password"></label>
+        </td>
+        <td>
+          <div *ngIf="!formData.get('password')?.valid  && formData.get('password')?.touched " style="color: red">
+            Password is required
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>RePassword</th>
+        <td>
+          <label><input type="password" formControlName="rePassword"></label>
+        </td>
+        <td>
+          <div *ngIf="!formData.get('rePassword')?.valid && formData.get('rePassword')?.touched" style="color: red">
+            Email is required
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>Country</th>
+        <td>
+          <label><input type="text" formControlName="country"></label>
+        </td>
+        <td>
+          <div *ngIf="!formData.get('country')?.valid && formData.get('country')?.touched" style="color: red">
+            Country is required
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td>
+          <label><input type="text" formControlName="age"></label>
+        </td>
+        <td>
+          <div *ngIf="!formData.get('age')?.valid && formData.get('age')?.touched" style="color: red">
+            Age is required
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>Gender</th>
+        <td>
+          <div>
+            <input id="male" type="radio" name="gender" formControlName="gender" value="Male" checked>
+            <label for="male"> Male </label>
+          </div>
+          <div>
+            <input id="female" type="radio" name="gender" formControlName="gender" value="FeMale">
+            <label for="female"> Female </label>
+          </div>
+        </td>
+        <td>
+          <div *ngIf="!formData.get('rePassword')?.valid && formData.get('rePassword')?.touched" style="color: red">
+            Email is required
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>Phone</th>
+        <td>
+          <label><input type="text" formControlName="phone"></label>
+        </td>
+        <td>
+          <div *ngIf="!formData.get('phone')?.valid && formData.get('phone')?.touched" style="color: red">
+            Email is required
+          </div>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <div>
+      <button style="text-align: center" type="submit" [disabled]="!formData.valid" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>

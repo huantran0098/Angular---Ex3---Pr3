@@ -4,20 +4,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { FontSizeEditorComponent } from './font-size-editor/font-size-editor.component';
-import { PetComponent } from './pet/pet.component';
+import { FontSizeEditorComponent } from './components/font-size-editor/font-size-editor.component';
+import { PetComponent } from './components/pet/pet.component';
 
-import {FormsModule} from "@angular/forms";
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
 
-import { ProductComponent } from './product/product.component';
+import { ProductComponent } from './components/product/product.component';
 
-import { SimpleCaculatorComponent } from './simple-caculator/simple-caculator.component';
-import { ColorPickerComponent } from './color-picker/color-picker.component';
+import { SimpleCaculatorComponent } from './components/simple-caculator/simple-caculator.component';
+import { ColorPickerComponent } from './components/color-picker/color-picker.component';
 import {ColorPickerModule} from "ngx-color-picker";
-import { ArticleComponent } from './article/article.component';
-import { LikeComponent } from './like/like.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
+import { ArticleComponent } from './components/article/article.component';
+import { LikeComponent } from './components/like/like.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NameCardComponent } from './components/name-card/name-card.component';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { RatingBarComponent } from './components/rating-bar/rating-bar.component';
+import { CountdownTimerAppComponent } from './components/countdown-timer-app/countdown-timer-app.component';
+import { TodoComponent } from './components/todo/todo.component';
+import { RegisterComponent } from './components/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,12 +36,19 @@ import { FooterComponent } from './footer/footer.component';
     LikeComponent,
     NavbarComponent,
     FooterComponent,
+    NameCardComponent,
+    ProgressBarComponent,
+    RatingBarComponent,
+    CountdownTimerAppComponent,
+    TodoComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ColorPickerModule
+    ColorPickerModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
