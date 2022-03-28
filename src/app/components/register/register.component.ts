@@ -47,6 +47,4 @@ export class RegisterComponent implements OnInit {
   public onSubmit() {
     console.log(this.formData.value)
   }
-
-
 }
